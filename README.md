@@ -14,7 +14,7 @@
 
 ---
 
-# SentinelAI: AI Cybersecurity Command Center
+# SentinelAI: AI Cybersecurity Dashboard
 
 SentinelAI is a modern Streamlit-based cybersecurity analytics platform for visualizing AI model performance, cybersecurity experiment results, detection telemetry, incident queues, and dataset insights.
 
