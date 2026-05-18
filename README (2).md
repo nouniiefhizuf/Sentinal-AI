@@ -14,226 +14,253 @@
 
 ---
 
-## 🚀 What is Sentinal AI?
+# SentinelAI: AI Cybersecurity Command Center
 
-**Sentinal AI** is an intelligent, AI-driven code creation platform that transforms natural language ideas into production-ready software. Whether you're prototyping a startup MVP, automating repetitive boilerplate, or learning a new framework — Sentinal AI acts as your co-pilot from concept to commit.
+SentinelAI is a modern Streamlit-based cybersecurity analytics platform for visualizing AI model performance, cybersecurity experiment results, detection telemetry, incident queues, and dataset insights.
 
-> 💡 **"Turn your thoughts into code. Let AI handle the syntax, so you focus on the logic."**
-
----
-
-## ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| 🤖 **Natural Language to Code** | Describe what you want in plain English and get clean, documented code instantly. |
-| 🧠 **Context-Aware Generation** | Understands your existing codebase, style guides, and dependencies for seamless integration. |
-| ⚡ **Multi-Language Support** | Python, JavaScript/TypeScript, Java, C++, Go, Rust, and more — all in one tool. |
-| 🔒 **Security-First Output** | Built-in vulnerability scanning ensures generated code follows OWASP best practices. |
-| 🔄 **Iterative Refinement** | Chat with the AI to refactor, optimize, or explain any piece of generated code. |
-| 📦 **Project Scaffolding** | Generate entire project structures — folders, configs, tests, and CI/CD pipelines. |
-| 🌐 **API & SDK Ready** | Expose your logic via auto-generated REST/GraphQL APIs with OpenAPI specs. |
-| 🧪 **Test Generation** | Auto-generates unit tests, integration tests, and edge-case scenarios. |
+The project transforms raw cybersecurity datasets and experiment outputs into a clean, interactive, SaaS-style dashboard with authentication, analytics, export tools, and a polished user interface.
 
 ---
 
-## 🖼️ Architecture
+## Overview
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     🎯  User Interface                       │
-│              (CLI / Web IDE / VS Code Extension)             │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────────────┐
-│                 🧠  Sentinal AI Engine                       │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐ │
-│  │  NLP Parser │→ │  Context    │→ │  Code Synthesizer   │ │
-│  │  (Intent)   │  │  Analyzer   │  │  (Multi-Language)   │ │
-│  └─────────────┘  └─────────────┘  └─────────────────────┘ │
-│         │                  │                  │             │
-│         └──────────────────┼──────────────────┘             │
-│                            ▼                               │
-│              ┌─────────────────────────┐                   │
-│              │   Security & Quality    │                   │
-│              │   Scanner (OWASP/SAST)  │                   │
-│              └─────────────────────────┘                   │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────────────┐
-│              📤  Output & Integration Layer                    │
-│     (GitHub PRs, Local Files, Cloud Deploy, CI/CD)         │
-└─────────────────────────────────────────────────────────────┘
-```
+This project focuses on evaluating and presenting AI performance across cybersecurity tasks such as:
+
+- Phishing detection
+- Malware analysis
+- Intrusion detection
+- Vulnerability discovery
+- Phishing generation
+- Attack planning
+
+It provides a professional dashboard interface for understanding how different AI models perform on defensive and offensive cybersecurity tasks.
 
 ---
 
-## 🛠️ Tech Stack
+## Key Features
 
-| Layer | Technologies |
-|-------|-------------|
-| **Frontend** | React 18, TypeScript, Vite, TailwindCSS, Monaco Editor |
-| **Backend** | FastAPI / Node.js, WebSocket, Redis |
-| **AI/ML** | OpenAI GPT-4, Anthropic Claude, Local LLMs (Ollama/Llama.cpp) |
-| **Security** | Semgrep, Bandit, ESLint Security, OWASP Dependency-Check |
-| **Database** | PostgreSQL, Vector DB (Pinecone/Weaviate) |
-| **DevOps** | Docker, Kubernetes, GitHub Actions |
+### Secure Authentication
 
----
+- User login system
+- Account creation
+- Password hashing
+- Cookie-based sessions
+- Local account storage using YAML
+- Protected dashboard access
 
-## 📦 Installation
+### Dashboard
 
-### Option 1: Quick Start (CLI)
+- KPI cards for model performance
+- Detection telemetry chart
+- Daily detections and risk score visualization
+- Activity feed
+- Incident queue
+- Model ranking
+- Evidence tables
 
-```bash
-# Clone the repository
-git clone https://github.com/nouniiefhizuf/Sentinal-AI.git
-cd Sentinal-AI
+### Analytics
 
-# Install dependencies
-npm install        # or pip install -r requirements.txt
+- Interactive experiment result tables
+- CSV export functionality
+- Published result figures
+- Dataset and result exploration
 
-# Configure environment
-cp .env.example .env
-# Edit .env with your API keys
+### Modern UI/UX
 
-# Run the application
-npm run dev        # or python main.py
-```
-
-### Option 2: Docker (Recommended)
-
-```bash
-# Pull and run with Docker Compose
-docker-compose up -d
-
-# Access the web interface at http://localhost:3000
-```
-
-### Option 3: VS Code Extension
-
-```bash
-# Install from VS Code Marketplace
-# Search: "Sentinal AI"
-# Or install from source:
-cd vscode-extension
-npm install
-npm run package
-```
+- Streamlit frontend
+- Custom CSS design system
+- Dark SaaS-style interface
+- Glassmorphism-inspired cards
+- Responsive layouts
+- Sidebar navigation
+- Professional typography and spacing
 
 ---
 
-## 🎮 Usage
+## Tech Stack
 
-### 1. Generate Code from Prompt
-
-```bash
-sentinal generate "Create a FastAPI endpoint for user authentication with JWT and bcrypt"
-```
-
-**Output:**
-```python
-from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
-from passlib.context import CryptContext
-from jose import JWTError, jwt
-from datetime import datetime, timedelta
-
-# ... production-ready auth module generated ...
-```
-
-### 2. Scaffold an Entire Project
-
-```bash
-sentinal scaffold   --name "ecommerce-api"   --stack "fastapi-postgresql-react"   --features "auth,payments,admin-dashboard"
-```
-
-### 3. Refactor Existing Code
-
-```bash
-sentinal refactor ./legacy_script.py --target "async-await pattern"
-```
-
-### 4. Interactive Mode
-
-```bash
-sentinal chat
-# > "Add rate limiting to my API"
-# > "Write unit tests for the cart module"
-# > "Explain this regex pattern"
-```
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| Streamlit | Frontend dashboard framework |
+| Pandas | Data loading and analysis |
+| NumPy | Numerical operations |
+| Plotly | Interactive visualizations |
+| Streamlit Authenticator | Login and account authentication |
+| PyYAML | Local account configuration |
+| Custom CSS | UI styling and layout polish |
 
 ---
 
-## 🔐 Security Features
+## Project Structure
 
-- ✅ **Prompt Injection Detection** — Sanitizes inputs to prevent jailbreaks.
-- ✅ **PII Redaction** — Automatically scrubs sensitive data from prompts.
-- ✅ **Code Vulnerability Scanning** — Flags SQL injection, XSS, hardcoded secrets.
-- ✅ **Dependency Audit** — Checks generated `requirements.txt` / `package.json` for known CVEs.
-- ✅ **Sandboxed Execution** — Optional isolated environment for testing generated code.
+```text
+SentinelAI/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── run_streamlit.ps1
+│
+├── src/
+│   ├── components/
+│   │   └── ui.py
+│   │
+│   ├── pages/
+│   │   ├── home.py
+│   │   ├── dashboard.py
+│   │   ├── analytics.py
+│   │   ├── settings.py
+│   │   └── login.py
+│   │
+│   ├── services/
+│   │   ├── auth_service.py
+│   │   └── data_loader.py
+│   │
+│   ├── styles/
+│   │   └── main.css
+│   │
+│   └── utils/
+│       ├── formatting.py
+│       └── state.py
+│
+├── datasets/
+│   ├── phishing_dataset.csv
+│   ├── malware_dataset.csv
+│   └── nslkdd_dataset.csv
+│
+├── results/
+│   ├── experiment_scores.csv
+│   ├── master_results_summary.csv
+│   └── generated figures/results
+│
+├── config/
+│   └── auth.example.yaml
+│
+└── .streamlit/
+    └── config.toml
 
----
+DatasetsThe project uses three cybersecurity datasets:
+Dataset	Description
+phishing_dataset.csv	Phishing detection data
+malware_dataset.csv	Malware analysis data
+nslkdd_dataset.csv	Intrusion detection data
+Together, the datasets are approximately 44 MB.
+How Detection Telemetry WorksThe Detection Telemetry chart shows two daily values:
+DetectionsThe number of suspicious cybersecurity events detected per day.
+Examples:
+phishing emails
+malware-like files
+suspicious logins
+intrusion signals
+abnormal network behavior
+Risk ScoreA calculated score that represents how serious the overall security situation is.
+The risk score can be based on:
+number of detections
+severity of alerts
+confidence of the AI model
+affected systems
+repeated suspicious behavior
+In the current version, this telemetry uses synthetic demo data to demonstrate the dashboard experience.
+Installation1. Clone the Repositorybash
 
-## 📊 Benchmarks
 
-| Task | Human (avg) | Sentinal AI | Speedup |
-|------|-------------|-------------|---------|
-| CRUD API Scaffold | 4 hours | 45 seconds | **320x** |
-| Unit Test Suite | 2 hours | 30 seconds | **240x** |
-| Code Review & Refactor | 1.5 hours | 20 seconds | **270x** |
-| Documentation Generation | 1 hour | 15 seconds | **240x** |
 
----
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+cd YOUR-REPOSITORY
 
-## 🗺️ Roadmap
+2. Create a Virtual Environmentbash
 
-- [x] Core code generation engine
-- [x] Multi-language support (Python, JS, TS, Java, Go)
-- [x] VS Code Extension
-- [x] Docker deployment
-- [ ] **Q2 2025** — GitHub Copilot integration
-- [ ] **Q2 2025** — Mobile app scaffolding (Flutter, React Native)
-- [ ] **Q3 2025** — Self-hosted LLM mode (100% offline)
-- [ ] **Q3 2025** — Team collaboration & version control
-- [ ] **Q4 2025** — CI/CD pipeline generation
 
----
 
-## 🤝 Contributing
+python -m venv myenv
 
-We love contributions! Here's how to get started:
+3. Activate the EnvironmentOn Windows:
+bash
 
-1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/Sentinal-AI.git`
-3. **Create a branch**: `git checkout -b feature/amazing-feature`
-4. **Make your changes** and add tests
-5. **Commit**: `git commit -m 'Add amazing feature'`
-6. **Push**: `git push origin feature/amazing-feature`
-7. **Open a Pull Request**
 
-Please read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details.
 
----
+myenv\Scripts\activate
 
-## 📜 License
+On macOS/Linux:
+bash
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
----
 
-## 🙏 Acknowledgments
+source myenv/bin/activate
 
-- Built with ❤️ by the Sentinal AI team and contributors.
-- Powered by [OpenAI](https://openai.com/), [Anthropic](https://www.anthropic.com/), and the open-source LLM community.
-- Inspired by the need for **secure, intelligent, and accessible** AI code generation.
+4. Install Dependenciesbash
 
----
 
-<div align="center">
 
-### ⭐ Star us on GitHub — it motivates us to ship faster!
+pip install -r requirements.txt
 
-**[🐛 Report Bug](https://github.com/nouniiefhizuf/Sentinal-AI/issues)** · **[💡 Request Feature](https://github.com/nouniiefhizuf/Sentinal-AI/issues)** · **[📖 Documentation](https://github.com/nouniiefhizuf/Sentinal-AI/wiki)**
+5. Run the Appbash
+
+
+
+streamlit run app.py
+
+Authentication SetupThis project uses streamlit-authenticator.
+For GitHub, do not upload real user accounts. Instead, include:
+Add to chat
+config/auth.example.yaml
+
+Example:
+yaml
+
+
+
+credentials:
+  usernames: {}
+cookie:
+  expiry_days: 7
+  key: change-this-cookie-key-before-deploying
+  name: sentinelai_auth
+preauthorized:
+  emails: []
+
+When running locally, the app can create and save accounts in:
+Add to chat
+config/auth.yaml
+
+This file should not be committed to GitHub.
+Security NotesDo not upload:
+Add to chat
+.env
+env
+myenv/
+config/auth.yaml
+.streamlit/secrets.toml
+API keys
+saved user accounts
+
+Passwords are hashed before being saved, but account files should still remain private.
+Main PagesHomeIntroduces the platform and shows high-level project metrics, dataset inventory, and feature cards.
+DashboardDisplays model performance, security telemetry, activity feed, incident queue, and evidence tables.
+AnalyticsAllows users to inspect experiment results, view generated figures, and export data.
+SettingsProvides profile, theme, model, notification, and configuration controls.
+LoginProvides secure access using account creation and username/password login.
+AI Model EvaluationThe project compares AI models across defensive and offensive cybersecurity tasks.
+Defensive tasks include:
+phishing detection
+malware analysis
+intrusion detection
+Offensive tasks include:
+phishing generation
+vulnerability discovery
+attack planning
+LLMs tend to perform better on offensive tasks because those tasks are more language-based and generative, while defensive tasks require more precise classification and detection accuracy.
+Example Presentation SummarySentinelAI is an AI cybersecurity dashboard built with Streamlit. It visualizes cybersecurity datasets, AI model performance, detection telemetry, incident queues, and analytics. The app includes secure login, hashed account storage, interactive charts, exportable tables, and a modern SaaS-style interface.
+Future ImprovementsPlanned improvements include:
+Real-time security log integration
+Database-backed user accounts
+Role-based access control
+Cloud authentication
+Live model inference
+Audit logs
+Deployment with HTTPS
+Admin user management
+More advanced model comparison tools
 
 </div>
