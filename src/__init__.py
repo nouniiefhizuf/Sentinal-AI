@@ -1,0 +1,1 @@
+"""SentinelAI Streamlit application package."""

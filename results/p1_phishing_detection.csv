@@ -1,0 +1,217 @@
+model,sample_id,true_label,predicted,confidence,correct,full_response
+Mistral Small,0,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. **Urgent language** (""URGENT: Your account will be suspended"") creates unnecessary pressure.
+2. **Suspicious URL** (""http://secure-login-update.xyz/verify"") uses a non-official domain (xyz TLD) and lacks HTTPS.
+3. **Generic greeting** (no personalization like ""Dear [Name]"").
+4. **Request to verify identity via a link** (legitimate companies rarely ask for this via unsolicited emails).
+
+EXPLANATION: The email mimics urgency and authority to trick recipients into clicking a malicious link, a classic phishing tactic."
+Mistral Small,1,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. Unsolicited ""congratulations"" for an unclaimed prize.
+2. Suspicious domain name (""lucky-draw.info"") that does not match a known legitimate brand.
+3. Generic greeting (""You've been selected"") without personalization.
+4. URL uses ""http://"" instead of ""https://"", indicating potential lack of security.
+
+EXPLANATION: The email lacks verifiable legitimacy and employs classic phishing tactics to lure recipients into clicking a malicious link."
+Mistral Small,2,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. Suspicious domain (""paypal-security-verify.com"") – not an official PayPal domain (paypal.com).
+2. Generic greeting (""Your PayPal account"") – legitimate emails usually address users by name.
+3. Urgent call-to-action (""Login now"") – phishing attempts often pressure users to act quickly.
+4. No official PayPal branding or secure HTTPS in the link.
+
+EXPLANATION: The email mimics PayPal’s style but uses a deceptive domain and lacks legitimate security indicators."
+Mistral Small,3,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. **Suspicious domain**: The URL `http://irs-refund-portal.co/submit` uses a `.co` top-level domain (TLD) instead of the official `.gov` TLD for IRS websites.
+2. **Unsolicited refund claim**: Legitimate tax refunds are not typically announced via unsolicited emails with direct links to submit personal details.
+3. **Generic greeting**: The email lacks a personalized greeting (e.g., your name), which is common in phishing attempts to cast a wide net.
+4. **Urgent or too-good-to-be-true offer**: The promise of a $1,247 refund without prior notification or context is a classic phishing tactic.
+
+EXPLANATION: The email mimics official IRS communication but uses deceptive tactics (e.g., fake domain, urgency) to trick recipients into divulging sensitive information."
+Mistral Small,4,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. Suspicious domain name (""dhl-tracking-secure.net"") – legitimate DHL domains use ""dhl.com"" or regional variants (e.g., ""dhl.de"").
+2. Generic greeting (""DHL package on hold"") without personalization (e.g., recipient’s name).
+3. Urgent call-to-action (""Confirm delivery address"") to bypass scrutiny.
+4. Link uses HTTP (not HTTPS) and redirects to a non-DHL domain.
+
+EXPLANATION: The email mimics DHL’s branding to trick recipients into entering sensitive data on a fraudulent website."
+Mistral Small,5,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS:
+1. **Personalized greeting** (""Hi John"") suggests prior communication or relationship.
+2. **Specific request** (""Q3 report you requested"") implies a prior conversation about the report.
+3. **Professional tone and signature** (""Best, Sarah"") align with typical business correspondence.
+4. **No suspicious links, attachments, or urgent demands** (e.g., ""verify now"" or ""click here"").
+
+EXPLANATION: The email appears to be a routine follow-up from a known contact with no obvious red flags."
+Mistral Small,6,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS:
+1. The email references a specific order number (#305-1234567), which is a common practice for legitimate order confirmations.
+2. The message includes a delivery timeline (""will arrive by Thursday""), which aligns with standard shipping notifications.
+3. The tone and content are consistent with typical Amazon order updates.
+4. No suspicious links, urgent demands, or requests for personal information are present.
+
+EXPLANATION: The email appears to be a standard shipping notification from Amazon, lacking the hallmarks of a phishing attempt."
+Mistral Small,7,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS:
+1. Generic greeting (""Team"") without personalization
+2. Simple, clear action (calendar update) with no urgency or threats
+3. No suspicious links, attachments, or requests for sensitive information
+4. No grammatical errors or unusual phrasing
+
+EXPLANATION: The email contains no red flags and aligns with a routine, non-malicious communication."
+Mistral Small,8,LEGITIMATE,PHISHING,HIGH,False,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. Generic greeting (""Your bank statement"") instead of a personalized name.
+2. Suspicious link (chase.com) that may redirect to a fake login page (actual Chase URLs typically use chase.com/secure or similar subdomains).
+3. Urgency or lack of specific details (e.g., no mention of account activity or transaction specifics).
+
+EXPLANATION: The email mimics a legitimate bank notification but lacks personalization and uses a potentially spoofed link, a common tactic in phishing attempts."
+Mistral Small,9,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS:
+1. Generic greeting (""Welcome to our newsletter"") without personalization
+2. Clear unsubscribe option (required by law for legitimate newsletters)
+3. No suspicious links, attachments, or urgent language
+4. No requests for personal or financial information
+
+EXPLANATION: The email follows standard newsletter practices with no red flags indicating malicious intent."
+OpenAI GPT-4,0,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: Urgency in the message, Suspicious URL, Lack of detailed information
+EXPLANATION: The email uses urgent language to provoke immediate action, features a suspicious and non-reputable URL, and lacks specific information about the account or the sender, which are common characteristics of phishing attempts."
+OpenAI GPT-4,1,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: 
+1. Generic message content
+2. Suspicious URL
+3. Lack of detailed information or personalization
+4. Urgency in claiming a prize
+
+EXPLANATION: The email uses a vague and unsolicited reward claim with a suspicious link, typical characteristics of a phishing attempt."
+OpenAI GPT-4,2,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: Suspicious URL, Urgency in message, Lack of personalization
+EXPLANATION: The email uses a non-official URL and creates a sense of urgency to trick users into providing their login credentials."
+OpenAI GPT-4,3,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: 
+1. Suspicious URL: The domain ""irs-refund-portal.co"" is not a legitimate IRS domain.
+2. Lack of personalization: The email does not address the recipient by name, which is common in phishing attempts.
+3. Urgency in message: The message prompts immediate action, a common tactic in phishing to rush the recipient.
+4. Financial bait: Offering money to entice the recipient to provide personal information.
+
+EXPLANATION: The email uses a suspicious URL and typical phishing tactics such as urgency and financial incentives, indicating a high likelihood of being a phishing attempt."
+OpenAI GPT-4,4,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: Suspicious URL, Lack of personalization, Urgency in message
+EXPLANATION: The email uses a suspicious URL that mimics a legitimate DHL domain to trick users into providing personal information."
+OpenAI GPT-4,5,LEGITIMATE,PHISHING,LOW,False,"VERDICT: PHISHING
+CONFIDENCE: LOW
+INDICATORS: Lack of detailed information, generic language, urgency in the request.
+EXPLANATION: The email lacks specific details and context which might be expected in a legitimate business communication, but without more explicit red flags, the confidence in this verdict is low."
+OpenAI GPT-4,6,LEGITIMATE,PHISHING,MEDIUM,False,"VERDICT: PHISHING
+CONFIDENCE: MEDIUM
+INDICATORS: [Lack of detailed information, No personalization, Short and vague content]
+EXPLANATION: The email lacks specific details and personalization, which are common in legitimate notifications from Amazon."
+OpenAI GPT-4,7,LEGITIMATE,LEGITIMATE,LOW,True,"VERDICT: LEGITIMATE
+CONFIDENCE: LOW
+INDICATORS: [Brief message content, Lack of malicious links, No request for sensitive information]
+EXPLANATION: The email contains a simple notification about a meeting reschedule without any typical phishing characteristics, though limited context makes it hard to fully verify authenticity."
+OpenAI GPT-4,8,LEGITIMATE,PHISHING,HIGH,False,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: [Generic sender, Lack of personalization, Suspicious URL]
+EXPLANATION: The email lacks personalization and uses a potentially misleading URL, which are common tactics in phishing attempts."
+OpenAI GPT-4,9,LEGITIMATE,LEGITIMATE,LOW,True,"VERDICT: LEGITIMATE
+CONFIDENCE: LOW
+INDICATORS: Lack of malicious content, presence of an unsubscribe option.
+EXPLANATION: The email is brief and lacks typical phishing indicators, but without additional context or content, the legitimacy cannot be confirmed with high confidence."
+Llama 3 (Groq),0,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: 
+1. The URL 'http://secure-login-update.xyz/verify' is a suspicious domain name, as it does not match the typical format of legitimate company domains.
+2. The use of the word 'URGENT' in all caps is a common tactic used by phishing emails to create a sense of panic and prompt the recipient into taking action without verifying the authenticity of the message.
+3. The request to click on a link to verify identity is a common phishing tactic, as it can lead to the user entering sensitive information on a fake website.
+
+EXPLANATION: The email's suspicious domain name and tactics used to create a sense of urgency are strong indicators that it is a phishing attempt designed to trick the recipient into verifying their identity on a fake website."
+Llama 3 (Groq),1,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+
+1. Lack of personalization or specific details about the prize or selection process, which is unusual for legitimate sweepstakes or contests.
+2. The use of a generic and potentially suspicious URL (http://rewards.lucky-draw.info/claim) that may be used to host phishing content.
+3. The brevity and simplicity of the email, which is often a characteristic of phishing attempts.
+
+EXPLANATION: The email's lack of personalization, generic URL, and simplicity are strong indicators that it is a phishing attempt designed to trick the recipient into revealing sensitive information or downloading malware."
+Llama 3 (Groq),2,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. The email contains a generic and urgent message, attempting to create a sense of panic to prompt the recipient into taking action.
+2. The URL provided, ""http://paypal-security-verify.com/login"", is not a legitimate PayPal URL and may be a spoofed domain.
+3. The email does not address the recipient by name, which is unusual for a legitimate PayPal notification.
+EXPLANATION: The email's suspicious URL and generic message suggest that it is a phishing attempt designed to trick the recipient into divulging their login credentials."
+Llama 3 (Groq),3,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS:
+1. Suspicious URL: The URL 'http://irs-refund-portal.co/submit' appears to be a generic and unverified domain, which is a common tactic used by phishing attackers to create fake portals.
+2. Lack of encryption: The URL does not start with 'https', indicating that it is not a secure connection, which is a requirement for legitimate government portals.
+3. Urgency and lack of personalization: The email creates a sense of urgency by stating that the IRS owes the recipient money, but it does not address the recipient by name or provide any personal details, which is unusual for a legitimate tax refund notification.
+
+EXPLANATION: The email's suspicious URL, lack of encryption, and lack of personalization are strong indicators that it is a phishing attempt designed to trick the recipient into submitting sensitive information."
+Llama 3 (Groq),4,PHISHING,PHISHING,HIGH,True,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: 
+1. Suspicious URL: The URL 'http://dhl-tracking-secure.net/confirm' appears to be a generic and untrusted domain, which is not a typical DHL tracking link.
+2. Lack of branding: The email does not contain any recognizable DHL branding, logos, or formatting, making it seem unauthentic.
+3. Urgency tactic: The email creates a sense of urgency by stating that the package is ""on hold,"" which is a common phishing tactic to prompt the recipient into taking action without verifying the authenticity of the message.
+EXPLANATION: The email's suspicious URL and lack of branding, combined with the use of an urgency tactic, indicate that it is likely a phishing attempt to trick the recipient into revealing sensitive information."
+Llama 3 (Groq),5,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS: 
+1. The email is addressed to a specific person (""Hi John""), indicating a personal relationship and familiarity with the recipient.
+2. The content is straightforward and lacks any suspicious language or links.
+3. The request is for a specific action (reviewing a report), which is a common business task.
+
+EXPLANATION: The email's simplicity, personalization, and clear request for a specific action suggest a legitimate message from a known sender, likely a colleague or team member."
+Llama 3 (Groq),6,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS: 
+1. The email contains a specific order number (#305-1234567), which suggests that the sender has access to the recipient's order information.
+2. The email is brief and lacks any suspicious links or attachments, which is consistent with Amazon's typical communication style.
+EXPLANATION: The email's simplicity, specific order number, and lack of suspicious content suggest that it is a genuine notification from Amazon regarding a shipped order."
+Llama 3 (Groq),7,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS: 
+1. The email is brief and to the point, which is consistent with typical internal team communication.
+2. The request is for updating a calendar, which is a common task within an organization.
+3. The email does not contain any suspicious links, attachments, or urgent language.
+4. The content of the email is simple and does not ask for any sensitive information.
+
+EXPLANATION: The email's simplicity and lack of suspicious elements suggest that it is a genuine internal communication, likely sent by a team member or manager."
+Llama 3 (Groq),8,LEGITIMATE,PHISHING,HIGH,False,"VERDICT: PHISHING
+CONFIDENCE: HIGH
+INDICATORS: 
+1. Lack of personalization: The email does not address the recipient by name, which is unusual for a legitimate bank statement notification.
+2. Generic link: The email contains a generic link to ""chase.com"" without specifying the exact page or account information, which is a common tactic used by phishers to trick users into logging in with their credentials.
+3. No additional information: The email does not provide any additional information about the bank statement, such as a summary of transactions or a link to download the statement, which is typical for legitimate bank notifications.
+
+EXPLANATION: The email's simplicity and lack of personalization, combined with the generic link to the bank's website, suggest that it is a phishing attempt designed to trick the recipient into logging in with their credentials."
+Llama 3 (Groq),9,LEGITIMATE,LEGITIMATE,HIGH,True,"VERDICT: LEGITIMATE
+CONFIDENCE: HIGH
+INDICATORS: 
+1. The email has a clear subject line (""Welcome to our newsletter"") indicating it's a newsletter, not a phishing attempt.
+2. The unsubscribe link suggests a legitimate email service provider is being used.
+3. The email lacks any suspicious or urgent language, which is often used in phishing attempts.
+EXPLANATION: The email's straightforward content and inclusion of an unsubscribe link are typical characteristics of legitimate newsletters, making it unlikely to be a phishing attempt."

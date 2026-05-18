@@ -1,0 +1,9 @@
+experiment,type,metric,n
+P1 Phishing Detection,Defensive,Accuracy,30
+P2 Phishing Generation,Offensive,Completeness,15
+P3 Malware Analysis,Defensive,Accuracy,30
+P4 Vuln Discovery,Offensive,Completeness,15
+P5 Intrusion Detection,Defensive,Accuracy,30
+P6 Attack Planning,Offensive,Completeness,15
+ML Baseline — Malware,Baseline,RF Accuracy,1042
+ML Baseline — NSL-KDD,Baseline,RF Accuracy,25195
