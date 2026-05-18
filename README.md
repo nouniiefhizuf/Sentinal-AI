@@ -2,13 +2,6 @@
 
 # 🛡️ Sentinal AI
 
-### *AI-Powered Code Creation — Write Better Code, Faster.*
-
-[![GitHub Stars](https://img.shields.io/github/stars/nouniiefhizuf/Sentinal-AI?style=for-the-badge&color=gold)](https://github.com/nouniiefhizuf/Sentinal-AI/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/nouniiefhizuf/Sentinal-AI?style=for-the-badge&color=blue)](https://github.com/nouniiefhizuf/Sentinal-AI/network)
-[![License](https://img.shields.io/github/license/nouniiefhizuf/Sentinal-AI?style=for-the-badge&color=green)](LICENSE)
-[![Issues](https://img.shields.io/github/issues/nouniiefhizuf/Sentinal-AI?style=for-the-badge&color=red)](https://github.com/nouniiefhizuf/Sentinal-AI/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/nouniiefhizuf/Sentinal-AI?style=for-the-badge&color=purple)](https://github.com/nouniiefhizuf/Sentinal-AI/commits/main)
 
 </div>
 
