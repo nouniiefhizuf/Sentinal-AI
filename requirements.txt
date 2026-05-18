@@ -1,0 +1,13 @@
+﻿streamlit>=1.37.0
+streamlit-authenticator>=0.3.3
+PyYAML>=6.0.2
+pandas>=2.2.0
+numpy>=1.26.0
+plotly>=5.22.0
+streamlit-option-menu>=0.3.13
+streamlit-extras>=0.4.7
+streamlit-lottie>=0.0.5
+streamlit-card>=1.0.2
+streamlit-aggrid>=1.0.5
+hydralit-components>=1.0.10
+python-dotenv>=1.0.1
